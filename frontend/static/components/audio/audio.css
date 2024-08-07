@@ -1,0 +1,169 @@
+.audio-container {
+  height: 80vh;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.record-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 80vh;
+}
+
+.record-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  position: relative;
+}
+
+.recent-recorders {
+  width: 30%;
+  border-left: 1px solid black;
+}
+
+.recent-recorders h2 {
+  text-align: center;
+  margin: 0;
+}
+
+#record-new {
+  width: 150px;
+  height: 150px;
+  border: 10px solid silver;
+  border-radius: 50%;
+  background: green;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  display: block;
+  position: relative;
+}
+
+#record-new:before,
+#record-new:after {
+  --pad: 0rem;
+  position: absolute;
+  z-index: 0;
+  display: block;
+  content: "";
+  left: var(--pad);
+  bottom: var(--pad);
+  top: var(--pad);
+  right: var(--pad);
+  border-radius: 50%;
+}
+
+#record-new:before {
+  transition: 0.2s;
+}
+
+#record-new:after {
+  transition: 0.4s;
+}
+
+#record-new.recording:after {
+  animation: smoothPadAfter 0.8s ease-in alternate-reverse infinite;
+}
+
+#record-new.recording:before {
+  animation: smoothPadBefore 0.8s ease-in alternate-reverse infinite;
+}
+
+@keyframes smoothPadAfter {
+   
+    
+  
+  0% {
+    left: -2rem;
+    bottom: -2rem;
+    top: -2rem;
+    right: -2rem;
+    background-color: rgba(220, 20, 60, 0.2);
+  }
+
+  100% {
+    left: -1rem;
+    bottom: -1rem;
+    top: -1rem;
+    right: -1rem;
+    background-color: rgba(220, 20, 60, 0.2);
+  }
+}
+
+@keyframes smoothPadBefore {
+  0% {
+    left: -1rem;
+    bottom: -1rem;
+    top: -1rem;
+    right: -1rem;
+    background-color: rgba(220, 20, 60, 0.2);
+  }
+
+  100% {
+    left: -0.5rem;
+    bottom: -0.5rem;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: rgba(220, 20, 60, 0.2);
+  }
+}
+
+.recording {
+  background: red !important;
+  border: none !important;
+}
+
+#last-recording {
+  position: absolute;
+  bottom: 2px;
+  width: 90%;
+}
+
+#recordings {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  margin: 10px;
+  overflow: scroll;
+  height: 100%;
+}
+
+.rec-row {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  align-items: center;
+}
+
+.rec-row:hover {
+  background: rgba(131, 131, 131, 0.2);
+}
+
+
+#volume{
+  width: 70%;
+  cursor: pointer;
+}
+
+#volumneWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+#volumneWrapper img{
+  filter: invert();
+  width: 25px;
+}
