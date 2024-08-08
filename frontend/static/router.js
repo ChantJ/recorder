@@ -1,6 +1,7 @@
 import NotFound from "./components/404/404.js";
 import Home from "./components/main/index.js";
 import AudioRecord from "./components/audio/audio.js";
+import VideoRecord from "./components/video/video.js";
 import { BackBtn } from "./components/common/backBtn.js";
 
 const route = (event) => {
@@ -19,6 +20,7 @@ const routes = {
   404: NotFound,
   "/": Home,
   "/audio": AudioRecord,
+  "/video": VideoRecord,
 };
 
 const handleLocation = async () => {

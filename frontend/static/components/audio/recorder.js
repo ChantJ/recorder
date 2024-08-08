@@ -14,7 +14,7 @@ let buffers = [];
 let stream;
 let [track] = [];
 
-stopButton.addEventListener("click", function () {
+stopButton?.addEventListener("click", function () {
   if (recording) {
     this.classList.remove("recording");
     this.innerText = "Start Recording";
@@ -85,7 +85,7 @@ function stop() {
 
   parameter.setValueAtTime(0, audioContext.currentTime);
 
-  const blob = encodeAudio(buffers, settings); // <11>
+  const blob = encodeAudio(buffers, settings); 
   const url = URL.createObjectURL(blob);
   audioElement.src = url;
 
@@ -102,7 +102,7 @@ function stop() {
   buffers = [];
 }
 
-volumeElement.addEventListener("input", function (e) {
+volumeElement?.addEventListener("input", function (e) {
   gainNode.gain.setValueAtTime(
     parseInt(e.target.value) / 100,
     audioContext.currentTime

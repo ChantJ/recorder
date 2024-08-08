@@ -1,18 +1,3 @@
-.audio-container {
-  height: 80vh;
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-  justify-content: space-between;
-}
-.record-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70%;
-  height: 80vh;
-}
-
 .record-wrapper {
   display: flex;
   flex-direction: column;
@@ -23,16 +8,6 @@
   width: 50%;
   height: 50%;
   position: relative;
-}
-
-.recent-recorders {
-  width: 30%;
-  border-left: 1px solid black;
-}
-
-.recent-recorders h2 {
-  text-align: center;
-  margin: 0;
 }
 
 #record-new {

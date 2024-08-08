@@ -5,7 +5,7 @@ const Home = () => {
         <img src="/static/assets/audioRec.png" />
         Audio Record
       </a>
-      <a class="nav-item" href="/about">
+      <a class="nav-item" href="/video">
         <img width="64" src="/static/assets/videoRec.png" />
         Video Record
       </a>

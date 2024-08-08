@@ -1,7 +1,7 @@
 const AudioRecord = () => {
   return ` <div>
       ${backBtn()}
-      <div class="audio-container">
+      <div class="container">
         <div class="record-container">
           <div class="record-wrapper">
             <button id="record-new">Start Recording</button>

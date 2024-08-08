@@ -1,0 +1,54 @@
+.video-record-wrapper, #playbackContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-recording{ 
+  border: 2px solid red
+}
+canvas {
+  z-index: 2;
+  position: absolute;
+}
+.video-record-wrapper video, #playbackContainer video {
+  z-index: 1;
+  position: absolute;
+}
+
+.buttons-container {
+  position: absolute;
+  bottom: 0;
+}
+.buttons-container button {
+  padding: 15px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#start, #go-to-new {
+  background: green;
+}
+
+#stop {
+  background: red;
+}
+
+#upload {
+  background: grey;
+}
+
+
+#video-recordings {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  margin: 10px;
+  overflow: scroll;
+  height: 100%;
+}
