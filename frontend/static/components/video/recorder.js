@@ -71,14 +71,19 @@ function setupStream(stream) {
     };
 
     mediaRecorder.onstop = function (e) {
+      //stop drawing
       if (dataFramId) cancelAnimationFrame(dataFramId);
       var blob = new Blob(chunks, { type: "video/webm" });
       chunks = [];
+
+      //show playback
       var videoURL = URL.createObjectURL(blob);
       recordContainer.style.display = "none";
       playbackContainer.style.display = "flex";
       playbackVideoEl.src = videoURL;
 
+
+      //create elements to add to recent lists
       var videoObject = document.createElement("video");
       videoObject.setAttribute("src", videoURL);
       videoObject.setAttribute("controls", false);
